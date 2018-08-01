@@ -12,18 +12,18 @@ from numpy import array
 BG = [1,1,1,1]
 FRONT = [0,0,0,0.001]
 
-SIZE = 13000
+SIZE = 8000
 
 EDGE = 0.08
 
 INUM = 20*SIZE
 
-STP = 0.0000003*0.15
+STP = 0.00000175*0.15
 
 GAMMA = 1.5
 
 
-def f():
+def guidelines():
   for x in linspace(EDGE, 1.0-EDGE, SIZE*10):
     yield array([[x, 0.0]])
 
@@ -31,7 +31,7 @@ def spline_iterator():
   from modules.sandSpline import SandSpline
 
   splines = []
-  guide = f()
+  guide = guidelines()
 
   pnum = randint(4,100)
   px = zeros(pnum,'float')
@@ -74,7 +74,7 @@ def main():
       sand.paint_dots(xy)
       if not itt%(SIZE):
         print(itt)
-      #   sand.write_to_png(fn.name(), GAMMA)
+        sand.write_to_png(fn.name(), GAMMA)
     except Exception as e:
       print(e)
       sand.write_to_png(fn.name(), GAMMA)

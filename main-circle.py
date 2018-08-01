@@ -17,7 +17,7 @@ FRONT = [0,0,0,0.01]
 
 TWOPI = 2.0*pi
 
-SIZE = 5000
+SIZE = 1000
 PIX = 1.0/SIZE
 
 INUM = 1000
@@ -71,7 +71,7 @@ def main():
   sand.set_bg(BG)
   sand.set_rgba(FRONT)
 
-  colors = get_colors('../colors/dark_cyan_white_black2.gif')
+  colors = get_colors('img/bw-gradient.png')
   nc = len(colors)
 
   fn = Fn(prefix='./res/', postfix='.png')

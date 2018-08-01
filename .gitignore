@@ -4,3 +4,5 @@ res/*
 *.pyc
 build
 __pycache__
+.vscode
+.idea
