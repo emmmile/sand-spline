@@ -18,7 +18,7 @@ EDGE = 0.08
 
 INUM = 20*SIZE
 
-STP = 0.0000008*0.15
+STP = 0.0000004*0.15
 
 GAMMA = 1.5
 
@@ -74,7 +74,7 @@ def main():
       sand.paint_dots(xy)
       if not itt%(SIZE):
         print(itt)
-        sand.write_to_png(fn.name(), GAMMA)
+        # sand.write_to_png(fn.name(), GAMMA)
     except Exception as e:
       print(e)
       sand.write_to_png(fn.name(), GAMMA)
