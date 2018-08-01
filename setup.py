@@ -58,8 +58,7 @@ setup(
     packages=find_packages(exclude=["tests*", "res/*"]),
     include_package_data=True,
     entry_points={
-        "console_scripts": [
-            'storagescanner=storagescanner.main:app'],
+        "console_scripts": [],
     },
     classifiers=[
         "Development Status :: 3 - Alpha",
